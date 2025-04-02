@@ -1,4 +1,3 @@
-/*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close');
@@ -16,7 +15,6 @@ if (navClose) {
 }
 
 
-/*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav_link');
 
 const linkAction = () => {
@@ -25,7 +23,7 @@ const linkAction = () => {
 };
 navLink.forEach((n) => n.addEventListener('click', linkAction));
 
-/*=============== SHADOW HEADER ===============*/
+
 const shadowHeader = () => {
     const header = document.getElementById('header');
     this.scrollY >= 50  ? header.classList.add('shadow-header') 
@@ -33,7 +31,7 @@ const shadowHeader = () => {
 };
 window.addEventListener('scroll', shadowHeader);
 
-/*=============== EMAIL JS ===============*/
+
 const contactForm = document.getElementById('contact-form'),
     contactMessage = document.getElementById('contact-message')
 
@@ -55,7 +53,6 @@ const sendEmail = (e) => {
 contactForm.addEventListener('submit', sendEmail);
 
 
-/*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up');
     this.scrollY >= 350 ? scrollUp.classList.add('show-scroll') 
@@ -63,7 +60,7 @@ const scrollUp = () => {
 };
 window.addEventListener('scroll', scrollUp);
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+
 const sections = document.querySelectorAll('section[id]')
 
 const scrollActive = () => {
@@ -85,7 +82,7 @@ const scrollActive = () => {
 window.addEventListener('scroll', scrollActive);
 
 
-/*=============== DARK LIGHT THEME ===============*/ 
+
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
@@ -109,7 +106,7 @@ themeButton.addEventListener('click', () => {
 })
 
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+
 const sr=ScrollReveal({
     origin:'top',
     distance:'60px',
