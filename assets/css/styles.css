@@ -589,7 +589,7 @@ body.dark-theme{
   display: grid;
 }
 .skills_info{
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(4,1fr);
   gap: 2.5rem 2rem;
 }
 .skills_data{
@@ -1054,7 +1054,7 @@ body.dark-theme{
   }
   .nav_list{
     flex-direction: row;
-    column-gap: 4rem;
+    column-gap: 2rem;
   }
   .nav_menu{
     margin-left: auto;
@@ -1177,7 +1177,7 @@ body.dark-theme{
     padding: .5rem;
   }
   .about_container{
-    grid-template-columns: 440px 525px;
+    grid-template-columns: 400px 625px;
     gap: 1rem 9rem;
     align-items: center;
     padding-block: 1rem;
@@ -1219,7 +1219,7 @@ body.dark-theme{
   }
   .about_info{
     align-self: flex-start;
-    padding-left: 3rem;
+    /* padding-left: 3rem; */
   }
   .about_description{
     font-size: var(--h2-font-size);
@@ -1327,4 +1327,109 @@ body.dark-theme{
   .scrollup{
     right: 3rem;
   }
+}
+
+
+/* Experience Section */
+.experience {
+   background-color: var(--body-color);
+   transition: background-color .4s;
+}
+
+.experience_container {
+   row-gap: 2.5rem;
+}
+
+.experience_data {
+   background-color: var(--container-color);
+   padding: 2rem 1.5rem;
+   border-left: 4px solid var(--first-color);
+   position: relative;
+   transition: background-color .4s, transform .3s;
+}
+
+.experience_data:hover {
+   transform: translateX(10px);
+}
+
+.experience_header {
+   margin-bottom: 1.5rem;
+}
+
+.experience_title {
+   font-size: var(--h2-font-size);
+   color: var(--title-color);
+   margin-bottom: .5rem;
+}
+
+.experience_company {
+   display: block;
+   font-size: var(--normal-font-size);
+   color: var(--first-color);
+   font-weight: var(--font-medium);
+   margin-bottom: .5rem;
+}
+
+.experience_date {
+   display: inline-flex;
+   align-items: center;
+   column-gap: .5rem;
+   font-size: var(--small-font-size);
+   color: var(--text-color);
+}
+
+.experience_date i {
+   font-size: 1rem;
+}
+
+.experience_description {
+   color: var(--text-color);
+   margin-bottom: 1.5rem;
+   line-height: 1.6;
+}
+
+.experience_skills {
+   display: flex;
+   flex-wrap: wrap;
+   gap: .5rem;
+}
+
+.experience_skill {
+   background-color: var(--black-color-light);
+   color: var(--white-color);
+   padding: .5rem 1rem;
+   border-radius: .25rem;
+   font-size: var(--small-font-size);
+   font-weight: var(--font-medium);
+}
+
+/* Dark theme */
+.dark-theme .experience_data:hover {
+   background-color: var(--black-color-light);
+}
+
+/* Responsive */
+@media screen and (min-width: 576px) {
+   .experience_container {
+      grid-template-columns: 500px;
+      justify-content: center;
+   }
+}
+
+@media screen and (min-width: 1150px) {
+   .experience_container {
+      grid-template-columns: 950px;
+   }
+
+   .experience_data {
+      padding: 3rem 2.5rem;
+   }
+
+   .experience_title {
+      font-size: var(--h2-font-size);
+   }
+
+   .experience_description {
+      font-size: var(--normal-font-size);
+   }
 }
